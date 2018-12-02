@@ -1,0 +1,106 @@
+button {
+    background-image: url("images/filteren.png");
+}
+
+a {
+    text-decoration: none;
+    color: #07487d;
+}
+
+body {
+    background-color: #ebebec;
+}
+
+article {
+    background-color: white;
+    color: black;
+    width: 20em;
+    /*border: 1px solid gray;*/
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 2em;
+    transition: 1s;
+    text-align: left;
+    font-family: Source Sans Pro;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* https://www.w3schools.com/css/css3_shadows.asp */
+
+article img {
+    width: 100%;
+    width: calc(100% + 2em);
+    margin-left: -1em;
+    margin-top: -1em;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+h1 a {
+    color: papayawhip;
+    color: hsl(30, 100%, 50%);
+}
+
+article:hover {
+    transform: rotate(360deg);
+    transform: skew(30deg);
+    filter: hue-rotate(180deg);
+}
+
+section h2 {
+    font-family: Source Sans Pro;
+    font-weight: normal;
+}
+
+form,
+h1 {
+    font-family: Source Sans Pro;
+}
+
+fieldset {
+    margin-top: 1em;
+    width: 20em;
+    background: white;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer {
+    color: black;
+}
+
+h3 {
+    border-bottom: 1px solid;
+    border-bottom-color: #e32137;
+}
+
+/* nog uitzoeken hoe je deze aanspreekt met selectoren */
+
+#zoeken {
+    border: 1px solid #07487d;
+}
+
+/* De afbeeldingen moeten nog aangepast worden*/
+
+main section:first-of-type article {
+    background-image: url("reizigers.jpg")
+}
+
+
+
+/*het komt ervoor
+
+.heeltof::before {
+    content: "sterretjes";
+}
+
+het komt erachter
+
+.heeltof::after {
+    content: "sterretjes";
+}*/
