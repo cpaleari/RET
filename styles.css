@@ -11,10 +11,12 @@ body {
     background-color: #ebebec;
 }
 
+
 article {
     background-color: white;
     color: black;
     width: 20em;
+    height: 23em;
     /*border: 1px solid gray;*/
     border-radius: 5px;
     padding: 1em;
@@ -25,7 +27,7 @@ article {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* https://www.w3schools.com/css/css3_shadows.asp */
+/* bron box-shadow: https://www.w3schools.com/css/css3_shadows.asp */
 
 article img {
     width: 100%;
@@ -34,11 +36,21 @@ article img {
     margin-top: -1em;
 }
 
+header {
+    background-color: #3E3739;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
 header img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
     width: 15%;
+}
+
+header button {
+    width: 2em;
+    height: 2em;
 }
 
 h1 a {
@@ -47,9 +59,10 @@ h1 a {
 }
 
 article:hover {
-    transform: rotate(360deg);
-    transform: skew(30deg);
-    filter: hue-rotate(180deg);
+    /transform: rotate(360deg);
+    /transform: skew(30deg);
+    transform: scale(1.03);
+    /filter: hue-rotate(180deg);
 }
 
 section h2 {
@@ -88,9 +101,28 @@ h3 {
 /* De afbeeldingen moeten nog aangepast worden*/
 
 main section:first-of-type article {
-    background-image: url("reizigers.jpg")
+    background-image: url("reizigers2.jpg");
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
 }
 
+section:last-of-type div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+
+section:first-of-type {
+    width: 100%;
+}
+
+@media only screen and (min-device-width: 20em) and (max-device-width: 30em) {
+    display: grid;
+    grid-template columns: 1fr;
+    justify-content: center;
+}
 
 
 /*het komt ervoor
