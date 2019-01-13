@@ -1,0 +1,148 @@
+body {
+    font-family: "Source Sans pro", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #3E3739;
+    height: 2em;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    /position: fixed;
+    width: 100%;
+}
+
+ul {
+    /* de ul moet een flex container worden */
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0 auto;
+
+}
+
+li img {
+    max-width: 1.5em;
+    max-height: 1.5em;
+    align-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+li:first-child {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+main {
+    padding-top: 2em;
+}
+
+.vooruitgang {
+    width: 100%;
+    background-color: grey;
+}
+
+.balk {
+    width: 1%;
+    height: 1.875em;
+    background-color: #07487d;
+}
+
+a {
+    text-decoration: none;
+    color: #07487d;
+}
+
+
+main img {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+main img:nth-of-type(2) {
+    display: none;
+}
+
+main img:last-of-type {
+    display: none;
+}
+
+@media (min-width: 50em) {
+    main img:first-of-type {
+        display: none;
+    }
+    main img:nth-of-type(2) {
+        display: inline;
+    }
+    main img:last-of-type {
+        display: none;
+    }
+}
+
+@media (min-width: 70em) {
+    main img:first-of-type {
+        display: none;
+    }
+    main img:nth-of-type(2) {
+        display: none;
+    }
+    main img:last-of-type {
+        display: inline;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+section:last-of-type {
+    padding-left: 2em;
+    background-color:
+}
+
+/* commentsectie vormgeven*/
+
+form {
+    max-width: 20em;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px #ebebec solid;
+    margin: 0.5em;
+}
+
+form button {
+    color: #fff;
+    background: #00477f;
+    font-family: Source Sans pro, sans-serif;
+    font-weight: 600;
+    border-radius: 0.25em;
+    margin: 0.5em;
+    padding: 0.75em 1.25em;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    width: 18em;
+    color: #00477f;
+    border-bottom: 1px solid;
+    border-bottom-color: #e32137;
+}
+
+p {
+    width: 23em;
+    display: flex;
+}
+
+footer {
+    width: 100%;
+    color: #00477f;
+    text-align: center;
+}

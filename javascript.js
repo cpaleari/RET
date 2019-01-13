@@ -8,6 +8,12 @@ filterknop.addEventListener('click', function () {
 
 var favorietknop = document.querySelector('div article footer img')
 
-favorietknop.addEventListener('click', function (){
+favorietknop.addEventListener('click', function () {
     favorietknop.classList.toggle('roodhartje');
 });
+
+var balk = document.querySelector('section div');
+var vooruitgang = document.querySelector('section:fist-of-type');
+
+balk.classList.add('balk');
+vooruitgang.classList.add('vooruitgang');
