@@ -1,19 +1,20 @@
-var filterknop = document.querySelector('header img');
+//Dit is voor het filter uitklappen
+
+var filterknop = document.querySelector('header ul li:nth-of-type(2)');
 var filteren = document.querySelector('form');
 
 filterknop.addEventListener('click', function () {
-    //filterknop.classList.toggle('show-filteren');
     filteren.classList.toggle('show-filteren');
 });
 
-var favorietknop = document.querySelector('div article footer img')
+//dit is voor de downloadknop
+//document.getElementsByTagName("ection:last-of-type article img:last-of-type")[0].setAttribute("id", "verhaalopslaan");ownloadknop.addEventListener('click', function () {downloadknop.classList.toggle('verhaalopslaan');});
 
-favorietknop.addEventListener('click', function () {
-    favorietknop.classList.toggle('roodhartje');
+
+
+// dit is voor interactie in het verhaal
+var interactieverhaal = document.querySelector('div');
+
+interactieverhaal.addEventListener('click', function () {
+    interactieverhaal.classList.toggle('interactieactief');
 });
-
-var balk = document.querySelector('section div');
-var vooruitgang = document.querySelector('section:fist-of-type');
-
-balk.classList.add('balk');
-vooruitgang.classList.add('vooruitgang');

@@ -166,6 +166,9 @@ main section:last-of-type {
     main section:last-of-type article {
         max-width: 15em;
     }
+    main section:first-of-type {
+        max-height: 20em;
+    }
 }
 
 @media (min-width: 70em) {
@@ -180,6 +183,9 @@ main section:last-of-type {
     }
     main section:last-of-type article {
         max-width: 20em;
+    }
+    main section:first-of-type {
+        max-height: 30em;
     }
 }
 
@@ -208,6 +214,12 @@ form:last-of-type {
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
 }
 
+fieldset p {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
 form.show-filteren {
     width: 23em;
 }
@@ -217,7 +229,7 @@ form button {
     background: #00477f;
     font-family: Source Sans pro, sans-serif;
     font-weight: 600;
-    border-radius: 0, 25em;
+    border-radius: 0.25em;
     margin: 0.5em;
     padding: 0.75em 1.25em;
     font-size: 1em;
@@ -234,4 +246,23 @@ form a {
 footer {
     color: #00477f;
     text-align: center;
+}
+
+article footer {
+    text-align: left;
+    display: flex;
+    justify-content: space-around
+}
+
+article footer p {
+    margin: 0;
+    padding: 0;
+
+}
+
+footer img {
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    padding: 0;
 }
