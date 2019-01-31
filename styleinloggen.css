@@ -30,6 +30,12 @@ li img {
     padding-right: 1em;
 }
 
+li:first-of-type img {
+    max-height: 2em;
+    max-width: 3em;
+}
+
+
 li:first-child {
     margin-left: 0;
     margin-right: auto;
@@ -91,6 +97,7 @@ input {
     border-right: none;
     padding-top: 0.5625em;
     padding-bottom: 0.5625em;
+    outline: 0;
 }
 
 fieldset {
@@ -106,4 +113,24 @@ footer {
     background-color: #ebebec;
     color: #00477f;
     text-align: center;
+}
+
+input[type=text] {
+    width: 6.25em;
+    transition: ease-in-out, width .35s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 9.375em;
+    border-bottom-color: #e32137;
+}
+
+input[type=password] {
+    width: 6.25em;
+    transition: ease-in-out, width .35s ease-in-out;
+}
+
+input[type=password]:focus {
+    width: 9.375em;
+    border-bottom-color: #e32137;
 }

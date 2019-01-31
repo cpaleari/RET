@@ -29,6 +29,11 @@ li img {
     padding-right: 1em;
 }
 
+li:first-of-type img {
+    max-height: 2em;
+    max-width: 3em;
+}
+
 li:first-child {
     margin-left: 0;
     margin-right: auto;
@@ -38,16 +43,11 @@ main {
     padding-top: 2em;
 }
 
-.vooruitgang {
-    width: 100%;
-    background-color: grey;
+div {
+    margin: 0 auto;
+    padding: 0;
 }
 
-.balk {
-    width: 1%;
-    height: 1.875em;
-    background-color: #07487d;
-}
 
 a {
     text-decoration: none;
@@ -69,7 +69,7 @@ main img:last-of-type {
     display: none;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 40em) {
     main img:first-of-type {
         display: none;
     }
@@ -81,7 +81,7 @@ main img:last-of-type {
     }
 }
 
-@media (min-width: 70em) {
+@media (min-width: 60em) {
     main img:first-of-type {
         display: none;
     }
@@ -91,6 +91,7 @@ main img:last-of-type {
     main img:last-of-type {
         display: inline;
         margin-left: 0;
+        padding-left: 0;
         width: 100%;
     }
 }
@@ -114,6 +115,15 @@ input {
     border-right: none;
     border-bottom: 2px #ebebec solid;
     margin: 0.5em;
+    outline: 0;
+}
+
+input:focus {
+    border-bottom-color: #e32137;
+}
+
+input[type=email] {
+    margin-bottom: 2em;
 }
 
 form button {
@@ -142,6 +152,7 @@ p {
 }
 
 footer {
+    padding-left: 1em;
     width: 100%;
     color: #00477f;
     text-align: center;
@@ -178,3 +189,5 @@ footer {
         transform: translate3d(4px, 0, 0);
     }
 }
+
+.

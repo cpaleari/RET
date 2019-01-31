@@ -10,6 +10,7 @@ header {
     padding-top: 0.5em;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 ul {
@@ -29,6 +30,11 @@ li img {
     padding-right: 1em;
 }
 
+li:first-of-type img {
+    max-height: 2em;
+    max-width: 3em;
+}
+
 li:first-child {
     margin-left: 0;
     margin-right: auto;
@@ -42,7 +48,7 @@ a {
 }
 
 main {
-    background-color: white;
+    background-color: #ebebec;
 }
 
 /* alle artikelen stylen*/
@@ -55,6 +61,8 @@ article {
     border-radius: 0.1875em;
     padding: 1em;
     margin-top: 2em;
+    margin-left: 0;
+    margin-right: 0;
     transition: 1s;
     font-family: Source Sans Pro;
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
@@ -86,6 +94,43 @@ footer {
     color: black;
 }
 
+main section:last-of-type article button {
+    color: #fff;
+    background: #00477f;
+    font-family: Source Sans pro, sans-serif;
+    font-weight: 600;
+    border-radius: 0.25em;
+    margin: 0.5em;
+    padding: 0.25em 0.75em;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+}
+
+main section:last-of-type article button:hover {
+    background: #009ddb;
+}
+
+main section:last-of-type article footer button:active {
+    transform: scale(0.95);
+    background-color: rgb(6, 24, 61);
+}
+
+
+.selected {
+    color: white;
+    background: green;
+    border-color: rgb(6, 24, 61);
+}
+
+h5 {
+    margin-top: 0;
+    margin-bottom: 0.05em;
+    text-align: right;
+}
+
+
 h3 {
     border-bottom: 1px solid;
     border-bottom-color: #e32137;
@@ -93,106 +138,10 @@ h3 {
 
 /* border is in px omdat het anders heel raar kan worden als het groter wordt*/
 
-main section:first-of-type article {
-    background-image: url(voorproefinterview.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 80%;
-    max-height: 20em;
-    margin: 0 auto;
-}
-
-/* deze selecteert de h3 van het uitgelichtte verhaal, en zorgt ervoor dat hij anders gepositioeert wordt */
-
-section:first-of-type {
-    background-image: url(reizigers2.jpg);
-    opacity: 0.5 margin-top: 0;
-    max-height: 15em;
-    padding-top: 2em;
-}
-
-main section:first-of-type h3 {
-    text-align: center;
-    position: relative;
-    top: 2.5em;
-
-}
-
-main section:last-of-type article {
-    margin: 0 auto;
-    max-width: 15em;
-}
-
-
-
-h2 {
-    color: #07487d;
-    font-weight: 600;
-    width: 100%;
-    text-align: center;
-}
-
-section:first-of-type h2 {
-    color: #07487d;
-    font-weight: normal;
-    margin-top: 0;
-    padding-top: 1em;
-}
-
-section:last-of-type {
-    background-color: #ebebec;
-}
-
-/* de breakpoints*/
-
-main section:last-of-type {
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 1em;
-    grid-template-columns: 1fr;
-}
-
-
-@media (min-width: 40em) {
-    main section:last-of-type {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1em;
-    }
-    h2 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-    main section:last-of-type article {
-        max-width: 15em;
-    }
-    main section:first-of-type {
-        max-height: 20em;
-    }
-}
-
-@media (min-width: 70em) {
-    main section:last-of-type {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1em;
-        4
-    }
-    h2 {
-        grid-column-start: 1;
-        grid-column-end: 4;
-    }
-    main section:last-of-type article {
-        max-width: 20em;
-    }
-    main section:first-of-type {
-        max-height: 30em;
-    }
-}
-
 /* de code voor de transitie etc van het filteren
 Gebruikte bron: https://www.w3schools.com/howto/howto_js_sidenav.asp*/
 
-form:last-of-type {
+form {
     height: 100%;
     /* volledige lengte */
     width: 0;
@@ -214,6 +163,11 @@ form:last-of-type {
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
 }
 
+fieldset {
+    margin-right: 0;
+    width: 80%;
+}
+
 fieldset p {
     padding-top: 0;
     margin-top: 0;
@@ -221,7 +175,7 @@ fieldset p {
 }
 
 form.show-filteren {
-    width: 23em;
+    width: 40%;
 }
 
 form button {
@@ -233,14 +187,46 @@ form button {
     margin: 0.5em;
     padding: 0.75em 1.25em;
     font-size: 1em;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    outline: 0;
+}
+
+form button:hover {
+    background: #009ddb;
+}
+
+form button:active {
+    transform: scale(0.95);
+    background-color: rgb(6, 24, 61);
 }
 
 form a {
-    margin-right: 1.5em;
+    margin-right: 1em;
     display: flex;
     justify-content: flex-end;
+}
+
+form p {
+    font-weight: 600;
+    border-bottom: 1px solid;
+    border-bottom-color: #e32137;
+}
+
+form h3 {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+label::after {
+    content: "-";
+    color: white;
+}
+
+input:focus {
+    border: 1px solid #e32137;
 }
 
 footer {
@@ -248,10 +234,10 @@ footer {
     text-align: center;
 }
 
-article footer {
+section:last-of-type article footer {
     text-align: left;
     display: flex;
-    justify-content: space-around
+    justify-content: space-between;
 }
 
 article footer p {
@@ -261,8 +247,200 @@ article footer p {
 }
 
 footer img {
-    width: 1em;
-    height: 1em;
+    width: 1.2em;
+    height: 1.2em;
     margin: 0;
     padding: 0;
+}
+
+main section:first-of-type article {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url(voorproefinterview.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    height: 8em;
+    margin: 0 auto;
+}
+
+main section:first-of-type article:hover {
+    max-height: 10em;
+}
+
+/* deze selecteert de h3 van het uitgelichtte verhaal, en zorgt ervoor dat hij anders gepositioeert wordt */
+
+section:first-of-type {
+    background-image: url(reizigers2.jpg);
+    margin-top: 0;
+    max-height: 15em;
+    padding-top: 2em;
+}
+
+main section:first-of-type h3 {
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    top: 1.5em;
+}
+
+main section:first-of-type p {
+    text-align: center;
+    position: relative;
+    top: 2em;
+    color: white;
+    font-weight: lighter;
+}
+
+main section:last-of-type article {
+    margin: 0 auto;
+    max-width: 15em;
+
+}
+
+
+
+h2 {
+    color: #07487d;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+section:first-of-type h1 {
+    color: #07487d;
+    margin-top: 0;
+    padding-top: 1em;
+    text-align: center;
+}
+
+section:last-of-type {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 2em;
+    align-content: center;
+    width: 80%;
+}
+
+/* de breakpoints*/
+
+main section:last-of-type {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+}
+
+
+
+@media (min-width: 40em) {
+    main section:last-of-type {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        width: 60%
+    }
+    h2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    main section:last-of-type article {
+        max-width: 15em;
+    }
+
+    main section:first-of-type {
+        max-height: 20em;
+    }
+    form.show-filteren {
+        width: 20em;
+    }
+    label {
+        display: inline-flex;
+    }
+    fieldset {
+        margin-right: 0;
+        width: 90%;
+    }
+}
+
+@media (min-width: 44em) {
+    main section:last-of-type {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+        width: 80%
+    }
+}
+
+@media (min-width: 60em) {
+    main section:last-of-type {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        width: 60%
+    }
+    main section:last-of-type article {
+        max-width: 20em;
+
+    }
+}
+
+@media (min-width: 65em) {
+    main section:last-of-type {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        width: 60%
+    }
+    main section:last-of-type article {
+        max-width: 18em;
+
+    }
+}
+
+
+@media (min-width: 70em) {
+    main section:last-of-type {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        width: 88%
+    }
+    h2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    main section:last-of-type article {
+        max-width: 18em;
+        height: 25em;
+
+    }
+
+    main section:first-of-type {
+        max-height: 30em;
+    }
+    form.show-filteren {
+        width: 20em;
+    }
+    label {
+        display: inline-flex;
+    }
+    fieldset {
+        margin-right: 0;
+        width: 90%;
+    }
+}
+
+@media (min-width: 75em) {
+    main section:last-of-type article {
+        max-width: 19em;
+
+    }
+}
+
+@media (min-width: 80em) {
+    main section:last-of-type {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        width: 80%
+    }
 }
